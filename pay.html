@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <title>UAC Store Paycheck</title>
+    <link rel="stylesheet" href="forumpay.css">
+
+    <style>
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <h1><a href="http://127.0.0.1:5502/PJ.HTML">DOOM Dark Age</a></h1>
+    </nav>
+
+    <main class="store-container">
+        <h2 class="glitch" data-text="CHECKOUT">CHECKOUT</h2>
+
+        <!-- 產品描述，將由 JS 填入 -->
+        <div id="productDesc" class="product-desc">
+            <p></p>
+        </div>
+
+        <form id="checkoutForm">
+            <label>
+                選擇版本
+                <select id="productSelect" name="product">
+                    <!-- 由 JS 動態插入 option -->
+                </select>
+            </label>
+
+            <label>
+                手機號碼
+                <input type="tel" id="phone" name="phone" required>
+            </label>
+
+            <label>
+                信箱
+                <input type="email" id="email" name="email" required>
+            </label>
+
+            <!-- 典藏版才顯示 -->
+            <label id="addrGroup" class="hidden">
+                地址
+                <input type="text" id="address" name="address">
+            </label>
+
+            <button type="submit">生成序號</button>
+        </form>
+
+        <div id="receiptScreen" class="receipt-container hidden">
+            <h1 class="glitch" data-text="TRANSACTION COMPLETE">TRANSACTION COMPLETE</h1>
+            <p>感謝你完成了地獄契約。以下是你的購買資訊：</p>
+
+            <div class="receipt-info">
+                <p><strong>版本：</strong><span id="productName">----</span></p>
+                <p><strong>序號：</strong><span id="serialCode">----</span></p>
+            </div>
+
+            <div class="receipt-note">
+                <p>⚠ 請妥善保存此序號，地獄將不接受遺失的靈魂。</p>
+            </div>
+
+            <a href="http://127.0.0.1:5502/PJ.HTML" class="return-btn">返回主頁</a>
+        </div>
+
+
+        <div id="code" class="code-display"></div>
+
+    </main>
+
+    <script src="forumpay.js"></script>
+</body>
+
+</html>
