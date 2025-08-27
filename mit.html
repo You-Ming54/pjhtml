@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="zh-Hant">
 
@@ -61,4 +62,69 @@
     <script src="forum.js"></script>
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <title>討論版</title>
+    <link rel="stylesheet" href="forum.css">
+
+</head>
+
+<body style="padding: 0;">
+    <!-- 導覽列 -->
+    <nav class="navbar">
+        <h1 id="title">DOOM Dark Age</h1>
+        <ul>
+            <li><a href="http://127.0.0.1:5502/bg.html#" target="_blank" rel="noopener noreferrer">Worldview</a></li>
+            <li><a href="http://127.0.0.1:5502/w.html" target="_blank" rel="noopener noreferrer">Weapons</a></li>
+            <li><a href="http://127.0.0.1:5502/shop.html" target="_blank" rel="noopener noreferrer">Shop</a></li>
+            <li><a href="http://127.0.0.1:5502/mit.html" target="_blank" rel="noopener noreferrer">Chat</a></li>
+        </ul>
+    </nav>
+
+    <!-- 頭部區塊 -->
+    <header class="hero">
+        <h2>討論版</h2>
+    </header>
+    <div class="forum-container">
+        <!-- 1. 留言輸入區 -->
+        <div class="post-box">
+            <textarea id="commentInput" placeholder="在此輸入你的留言…" maxlength="1000"></textarea>
+
+            <!-- 隱藏原本的檔案 input -->
+            <input id="imageInput" type="file" accept="image/*" multiple style="display: none;">
+
+
+            <!-- 用 Label 取代選檔按鈕 -->
+            <label for="imageInput" class="btn file-btn">
+                選擇檔案
+            </label>
+
+
+            <button id="postBtn">發表留言</button>
+        </div>
+
+
+        <!-- 2. 留言列表區 -->
+        <div id="commentsList" class="comments-list">
+            <!-- 動態插入 <div class="comment" data-id="0">…</div> -->
+        </div>
+    </div>
+
+    <button id="backToTop" title="回到頁首">↑</button>
+    <!-- 頁尾 -->
+    <footer>
+        <p>© 2025 UAC | Powered by Argent Energy</p>
+        <p style="font-size: 10px;">文字圖片內容皆由ai搜尋生成</p>
+
+    </footer>
+
+
+    <script src="forum.js"></script>
+</body>
+
+>>>>>>> d93486e066e34d7b48face2cd0b712d85fb22d5b
 </html>

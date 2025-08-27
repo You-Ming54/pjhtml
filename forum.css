@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* 引入 DOOM 風格字體 */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
 
@@ -259,4 +260,267 @@ footer {
     background: rgba(0, 0, 0, 0);
     color: #ff4444;
     border: 2px solid #111;
+=======
+/* 引入 DOOM 風格字體 */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+
+.navbar {
+    font-family: 'Orbitron';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #1a1a1a;
+    padding: 15px 40px;
+    border-bottom: 4px solid #990000;
+}
+
+#title {
+    cursor: pointer;
+    /* 顯示可點擊手型 */
+}
+
+.navbar h1 {
+    color: #ff0000;
+    letter-spacing: 2px;
+    display: inline;
+}
+
+.navbar ul {
+    list-style: none;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.navbar li {
+    display: inline;
+    margin-left: 30px;
+}
+
+.navbar li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar li a:hover {
+    color: #ff4444;
+}
+
+/* 頭部區塊 */
+.hero {
+    margin-top: 60px;
+    /* 避免被固定的導覽列覆蓋 */
+    text-align: center;
+    padding: 125px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(153, 0, 0, 0.9)),
+        url('https://images8.alphacoders.com/682/682604.jpg') top/cover no-repeat;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #ff3300;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    background: #111;
+    color: #eee;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.forum-container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.post-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.post-box textarea {
+    resize: vertical;
+    min-height: 80px;
+    padding: 10px;
+    border: 2px solid #444;
+    background: #222;
+    color: #eee;
+    font-size: 1rem;
+}
+
+.post-box button {
+    align-self: flex-end;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background: #990000;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background .2s;
+}
+
+/* 針對 post-box 裡的 .btn */
+.post-box .btn {
+    padding: 8px 16px;
+    background: #990000;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background .2s;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.post-box .btn:hover {
+    background: #ff0000;
+}
+
+/* 額外間距 */
+.post-box .file-btn {
+    margin-left: 8px;
+}
+
+
+.file-btn {
+    width: 70px;
+    display: inline-block;
+    /* 如果需要固定寬度，可加 width:\<數值\>; */
+    margin-left: 8px;
+    /* 讓它和 textarea、按鈕保持間距 */
+    text-align: start;
+    line-height: normal;
+    /* 確保垂直置中 */
+}
+
+.post-box button:hover {
+    background: #ff0000;
+}
+
+.comments-list .comment {
+    border-top: 1px solid #333;
+    padding: 12px 0;
+}
+
+.comments-list .comment .meta {
+    font-size: 0.85rem;
+    color: #999;
+    margin-bottom: 6px;
+}
+
+.comments-list .comment .text {
+    white-space: pre-wrap;
+}
+
+
+
+/* 回覆按鈕 */
+.reply-btn {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #ff4444;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* 回覆框 & 送出按鈕 */
+.reply-box {
+    margin-top: 8px;
+}
+
+.reply-box textarea {
+    width: 100%;
+    min-height: 50px;
+    padding: 6px;
+    background: #222;
+    border: 1px solid #444;
+    color: #eee;
+}
+
+.reply-box button {
+    margin-top: 4px;
+    padding: 4px 8px;
+    background: #990000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* 嵌套回覆列表 */
+.replies {
+    margin-top: 12px;
+    padding-left: 16px;
+    border-left: 2px solid #333;
+}
+
+.replies .comment {
+    margin-bottom: 12px;
+}
+
+/* 隱藏用 */
+.hidden {
+    display: none;
+}
+
+/* 放在 forum.css 最底部 */
+.comments-list .comment .images {
+    margin-top: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.comments-list .comment .images img {
+    max-width: 640px;
+    height: auto;
+    object-fit: cover;
+    border: 1px solid #444;
+    border-radius: 4px;
+}
+
+/* 頁尾 */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    border-top: 4px solid #990000;
+    font-size: 14px;
+}
+
+/* 返回頁首按鈕樣式 */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 15px;
+    display: none;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0);
+    color: #fff;
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+#backToTop:hover {
+    background: rgba(0, 0, 0, 0);
+    color: #ff4444;
+    border: 2px solid #111;
+>>>>>>> d93486e066e34d7b48face2cd0b712d85fb22d5b
 }
