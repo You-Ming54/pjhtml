@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: url('https://www.transparenttextures.com/patterns/asfalt-dark.png'), #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #1a1a1a;
+    border-bottom: 4px solid #990000;
+}
+
+.navbar h1 a {
+    color: #ff0000;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.store-container {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 30px;
+    background: rgba(26, 26, 26, 0.9);
+    border: 4px solid #990000;
+    box-shadow: 0 0 20px #ff0000;
+    text-align: center;
+}
+
+.glitch {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #ff0000;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    animation: flicker 2s infinite;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: .7;
+}
+
+.glitch::before {
+    animation: glitchTop 3s infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+    color: #00fffc;
+}
+
+.glitch::after {
+    animation: glitchBot 2s infinite;
+    clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+    color: #ff0062;
+}
+
+@keyframes flicker {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    10%,
+    30%,
+    50%,
+    70% {
+        opacity: .4;
+    }
+}
+
+@keyframes glitchTop {
+
+    0%,
+    100% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translate(-2px, -2px);
+    }
+
+    40% {
+        transform: translate(-2px, 2px);
+    }
+
+    60% {
+        transform: translate(2px, -2px);
+    }
+
+    80% {
+        transform: translate(2px, 2px);
+    }
+}
+
+@keyframes glitchBot {
+
+    0%,
+    100% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translate(2px, 2px);
+    }
+
+    40% {
+        transform: translate(2px, -2px);
+    }
+
+    60% {
+        transform: translate(-2px, 2px);
+    }
+
+    80% {
+        transform: translate(-2px, -2px);
+    }
+}
+
+.product-desc p {
+    color: #ff4444;
+    margin-bottom: 15px;
+}
+
+form {
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+label input,
+label select {
+    width: 100%;
+    margin-top: 5px;
+    padding: 8px;
+    background: transparent;
+    border: 2px solid #990000;
+    color: #fff;
+    font-size: 1rem;
+    transition: border-color .3s;
+}
+
+label input:focus,
+label select:focus {
+    outline: none;
+    border-color: #ff4444;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #990000;
+    border: 2px solid #ff0000;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background .3s, transform .2s;
+}
+
+button:hover {
+    background: #ff0000;
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}
+
+.code-display {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #00fffc;
+    word-break: break-all;
+}
+
+.receipt-container {
+    text-align: center;
+    border: 4px solid #990000;
+    padding: 40px;
+    max-width: 500px;
+    background: rgba(10, 10, 10, 0.9);
+    box-shadow: 0 0 30px #ff0000;
+    margin: 50px auto;
+}
+
+.receipt-info {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.1rem;
+    color: #ff4444;
+}
+
+.receipt-note {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-bottom: 30px;
+}
+
+.return-btn {
+    padding: 10px 20px;
+    background: #990000;
+    color: #fff;
+    border: 2px solid #ff0000;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.return-btn:hover {
+    background: #ff0000;
+}
